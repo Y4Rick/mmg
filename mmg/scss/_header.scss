@@ -1,119 +1,154 @@
 .header {
-
-    &--view {
-        box-shadow: 0 5px 10px rgba($dark, 0.05);
-    }
+    box-shadow: 0 5px 10px rgba($dark, 0.05);
 
     &__navigation {
+        @extend %container;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-        &--view {
-            display: flex;
-            max-width: 1176px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-        }
+    &__logo {
+        padding: 26px 0 27px 0;
+    }
+
+    &__login {
+        padding: 32px 0;
     }
 }
 
 .logo {
 
-    &--view {
-        padding: 26px 0 27px 0;
-    }
-
     &__link {
-
-        &--view {
-            display: block;
-        }
+        display: block;
     }
 
     &__img {
-
-        &--view {
-            display: block;
-            width: 155px;
-            height: 51px;
-        }
+        display: block;
+        width: 155px;
+        height: 51px;
     }
 }
 
 .nav {
 
     &__menu {
-
-        &--view {
-            display: flex;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        
-        &--mode {
-            list-style: none;
-        }
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style: none;
     }
     
     &__item {
+        border-bottom: 2px solid transparent;
 
-        &--mode {
-
-            &:not(:last-child) {
-                margin: 0 60px 0 0;
-            }
-        }
-
-    }
-    
-    &__link {
-
-        &--view {
-            display: block;
-            padding: 41px 0;
-            border-bottom: 2px solid transparent;
-        }
-        
-        &--mode {
-            color: #3c3c3c;
-            font-size: 15px;
-            font-weight: 400;
-            text-decoration: none;
+        &:not(:last-child) {
+            margin: 0 60px 0 0;
         }
 
         &:hover {
-            color: $color-hovered;
             transition: 0.2s;
-            border-bottom: 2px solid $color-hovered;
+            border-bottom: 2px solid $emphasised;
+        }
+    }
+
+    &__dropdown-menu {
+        position: relative;
+
+        &:hover .sub-menu {
+            display: block;
+        }
+
+        &:hover .nav__dropdown-arrow {
+            color: $emphasised;
+            transition: 0.2s;
+        }
+
+        &:hover .nav__dropdown-arrow:after {
+            transform: rotate(0deg);
+            transition: 0.2s;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 41px 0;
+        color: $primary;
+        font-size: 15px;
+        text-decoration: none;
+        
+        &:hover {
+            color: $emphasised;
+            transition: 0.2s;
+        }
+    }
+
+    &__dropdown-arrow {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 7px;
+            margin: 0 0 0 10px;
+            transform: rotate(90deg);
+            background-image: url('../img/header/nav/nav_arrow.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto;
+        }
+    }
+}
+
+.sub-menu {
+    display: none;
+    margin: 0;
+    padding: 0;
+    left: -10px;
+    bottom: -122px;
+    position: absolute;
+    list-style: none;
+    border-top: 2px solid $emphasised;
+    
+    &__item {
+        background-color: $light;
+    }
+
+    &__link {
+        display: block;
+        width: 229px;
+        padding: 6px 0 4px 20px;
+        color: $subordinate;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover {
+            padding-left: 10px;
+            transition: 0.2s;
+            background-color: $subordinate-lighter;
         }
     }
 }
 
 .login {
 
-    &--view {
-        padding: 32px 0;
-    }
-
     &__button {
-
-        &--view {
-            padding: 10px 36px 11px 36px;
-            background-color: $btn-default;
-            box-shadow: 0 5px 7px $btn-shadow;
-            border: none;
-        }
-
-        &--mode {
-            color: $light;
-            font-weight: 400;
-            line-height: 19px;
-            text-transform: uppercase;
-            letter-spacing: 0.7px;
-            cursor: pointer;
-        }
+        padding: 10px 36px 11px 36px;
+        color: $light;
+        line-height: 19px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+        background-color: $btn-default;
+        box-shadow: 0 5px 7px $btn-shadow;
+        border: none;
+        cursor: pointer;
 
         &:hover {
             background-color: $btn-hovered;

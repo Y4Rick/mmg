@@ -8,35 +8,54 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header header--view">
-        <div class="header__navigation header__navigation--view">
-            <div class="logo logo--view">
-                <a class="logo__link logo__link--view" href="#">
-                    <img class="logo__img logo__img--view" src="img/header/logo/mmg_logo.png" alt="MMG Logo">
+    <header class="header">
+        <div class="header__navigation">
+            <div class="logo header__logo">
+                <a class="logo__link" href="#">
+                    <img class="logo__img" src="img/header/logo/mmg_logo.png" alt="MMG Logo">
                 </a>
             </div>
             <nav class="nav">
-                <ul class="nav__menu nav__menu--view nav__menu--mode">
-                    <li class="nav__item nav__item--mode">
-                        <a href="#" class="nav__link nav__link--view nav__link--mode">Home</a>
+                <ul class="nav__menu">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Home</a>
                     </li>
-                    <li class="nav__item nav__item--mode">
-                        <a href="#" class="nav__link nav__link--view nav__link--mode">News</a>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">News</a>
                     </li>
-                    <li class="nav__item nav__item--mode">
-                        <a href="#" class="nav__link nav__link--view nav__link--mode">Products</a>
+                    <li class="nav__item nav__dropdown-menu">
+                        <a href="#" class="nav__link nav__dropdown-arrow">
+                            <span>Products</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="sub-menu__item">
+                                <a href="#" class="sub-menu__link">BOT - CHECKIN</a>
+                            </li>
+                            <li class="sub-menu__item">
+                                <a href="#" class="sub-menu__link">SMART HOME</a>
+                            </li>
+                            <li class="sub-menu__item">
+                                <a href="#" class="sub-menu__link">SMART CAR</a>
+                            </li>
+                            <li class="sub-menu__item">
+                                <a href="#" class="sub-menu__link">SMART WALLET</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="nav__item nav__item--mode">
-                        <a href="#" class="nav__link nav__link--view nav__link--mode">Download</a>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Download</a>
                     </li>
-                    <li class="nav__item nav__item--mode">
-                        <a href="#" class="nav__link nav__link--view nav__link--mode">Contact</a>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Contact</a>
                     </li>
                 </ul>
             </nav>
-            <div class="login login--view">
-                <button class="login__button login__button--view login__button--mode">LOGIN</button>
+            <div class="login header__login">
+                <button class="login__button">LOGIN</button>
             </div>
+        </div>
+        <div class="intro">
+
         </div>
     </header>
 </body>
