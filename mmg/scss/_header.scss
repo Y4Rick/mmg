@@ -53,23 +53,23 @@
             transition: 0.2s;
             border-bottom: 2px solid $emphasised;
         }
-    }
 
-    &__dropdown-menu {
-        position: relative;
+        &--dropdown-menu {
+            position: relative;
 
-        &:hover .sub-menu {
-            display: block;
-        }
-
-        &:hover .nav__dropdown-arrow {
-            color: $emphasised;
-            transition: 0.2s;
-        }
-
-        &:hover .nav__dropdown-arrow:after {
-            transform: rotate(0deg);
-            transition: 0.2s;
+            &:hover .sub-menu {
+                display: block;
+            }
+    
+            &:hover .nav__link--dropdown-arrow {
+                color: $emphasised;
+                transition: 0.2s;
+            }
+    
+            &:hover .nav__link--dropdown-arrow:after {
+                transform: rotate(0deg);
+                transition: 0.2s;
+            }
         }
     }
 
@@ -79,29 +79,29 @@
         color: $primary;
         font-size: 15px;
         text-decoration: none;
+
+        &--dropdown-arrow {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+    
+            &::after {
+                content: '';
+                display: block;
+                width: 10px;
+                height: 7px;
+                margin: 0 0 0 10px;
+                transform: rotate(90deg);
+                background-image: url('../img/header/nav/nav_arrow.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: auto;
+            }
+        }
         
         &:hover {
             color: $emphasised;
             transition: 0.2s;
-        }
-    }
-
-    &__dropdown-arrow {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-
-        &::after {
-            content: '';
-            display: block;
-            width: 10px;
-            height: 7px;
-            margin: 0 0 0 10px;
-            transform: rotate(90deg);
-            background-image: url('../img/header/nav/nav_arrow.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: auto;
         }
     }
 }
